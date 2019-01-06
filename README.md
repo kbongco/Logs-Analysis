@@ -11,8 +11,11 @@ answer several questions such as "Who are the top authors?" and "What are the to
 You Will need:<br> 
 <ul>
   <li><a href="https://www.python.org/downloads/">Python 3</a></li>
-  <li><a href="https://www.virtualbox.org/wiki/Download_Old_Builds_5_1">Virtual Box</a><li>
+  <li><a href="https://www.virtualbox.org/wiki/Download_Old_Builds_5_1">Virtual Box</a></li>
   <li><a href="https://www.vagrantup.com/downloads.html">Vagrant</a></li>
 </ul>
 
 <b>Setup</b>
+<ol>
+  <li>Install Vagrant and Virtual Box</li>
+  <li>Clone this Repository</li>
