@@ -19,8 +19,20 @@ You Will need:<br>
 <ol>
   <li>Install Vagrant and Virtual Box</li>
   <li>Clone this Repository</li>
+</ol>  
 
 <b>How to Run</b>
 <br>
 Launch the Vagrant VM changing the directory via the command line to where it was installed. Then run vagrant up, afterwards
-run vagrant ssh. 
+run vagrant ssh.<br> 
+
+In order to load the data, the command psql -d news -f newsdata.sql is used to connect to the
+database as well as in order to run the various SQL statements. The database contains
+three different tables: 
+<ul>
+  <li>Authors Table</li>
+  <li>Articles Table</li>
+  <li>Logs Table</li>
+ </ul>
+ 
+
