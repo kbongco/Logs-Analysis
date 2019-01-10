@@ -19,13 +19,17 @@ You Will need:<br>
 <ol>
   <li>Install Vagrant and Virtual Box</li>
   <li>Clone this Repository using git clone </li>
+  <li>Download the data from<a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip">Here</a </li>
+    <li>Unzip the file, newsdata.sql</li>
+  
 </ol>  
 
 <b>How to Run</b>
 <br>
-Launch the Vagrant VM changing the directory via the command line using ```cd ```to where it was installed.<br>
+Launch the Vagrant VM changing the directory via the shell using ```cd ```to where it was installed.<br>
 Next run ```vagrant up``` to start up the virtual machine. <br>
-Last, run the command   ```vagrant ssh``` to log into the virtual machine
+Run the command   ```vagrant ssh``` to log into the virtual machine<br>
+Once logged in, run the command ```cd /vagrant``` to change the directory and look around with ```ls```<br>
 
 In order to load the data, the command ```psql -d news -f newsdata.sql ``` will be used to load the data into the database. There are three tables in the database these tables are :
 <ul>
@@ -64,7 +68,7 @@ req_errors.errors/total_requests.requests:::float * 100 AS
 error_rate FROM total_reqs, req_errors WHERE 
 total_reqs.date = req_errors.date;
 ```
-Afterwards, you can run the log analysis program on your shell using: 
+Afterwards, you can run the log analysis program on your shell using:<br> 
 ``` python logsanalysiscleaned.py ```
 
 
