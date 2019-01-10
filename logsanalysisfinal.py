@@ -43,18 +43,16 @@ def error_days(Query3):
     for result in results:
         print ('\t' + str(result[0]) + ' at ' + str(result[1]) + ' %')
 
-
-if __name__ == '__main__':
-    print("Here are the results!")
-    print("\n")
-    print("The Top three articles by page view are:")
-    top_three_articles(Query1)
-    print("\n")
-    print("The Top Authors are:")
-    popular_authors(Query2)
-    print("\n")
-    print("High error days exceeding 1% were on:")
-    error_days(Query3)
+print("Here are the results!")
+print("\n")
+print("The Top three articles by page view are:")
+top_three_articles(Query1)
+print("\n")
+print("The Top Authors are:")
+popular_authors(Query2)
+print("\n")
+print("High error days exceeding 1% were on:")
+error_days(Query3)
     
     
         
