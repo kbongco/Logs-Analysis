@@ -22,10 +22,8 @@ def top_three_articles(Query1):
     c=db.cursor()
     c.execute(Query1)
     results = c.fetchall()
-    print('Top three articles by page view')
-    for i in results:
-        print('"' + i[0] + '" -- ' + str(i[1]) + " views")
-    print(" ")
+    for x in results:
+        print('"' + x[0] + '" have ' + str(x[1]) + " views")
 
 #Print out authors
 def popular_authors(Query2):
@@ -33,10 +31,8 @@ def popular_authors(Query2):
     c=db.cursor()
     c.execute(Query2)
     results = c.fetchall()
-    print('Most Popular authors of all time by view')
-    for i in results:
-          print(i[0] + ' -- ' + str(i[1]) + ' views')
-    print('')
+    for x in results:
+          print(x[0] + ' had ' + str(x[1]) + ' views')
 
 #Print out Error days
 def error_days(Query3):
@@ -44,20 +40,20 @@ def error_days(Query3):
     c=db.cursor()
     c.execute(Query3)
     results = c.fetchall()
-    print('High error days when exceeding 1%')
     for result in results:
-        print ('\t' + str(result[0]) + ' ---> ' + str(result[1]) + ' %')
+        print ('\t' + str(result[0]) + ' at ' + str(result[1]) + ' %')
 
 
 if __name__ == '__main__':
     print("Here are the results!")
-    print("The Top three articles are:")
+    print("\n")
+    print("The Top three articles by page view are:")
     top_three_articles(Query1)
     print("\n")
     print("The Top Authors are:")
     popular_authors(Query2)
     print("\n")
-    print("High error days were on...")
+    print("High error days exceeding 1% were on:")
     error_days(Query3)
     
     
