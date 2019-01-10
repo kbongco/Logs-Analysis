@@ -6,7 +6,7 @@ DBNAME = "news"
 Query1 = "SELECT articles.title, COUNT(*) as views FROM articles INNER JOIN log on log.path like CONCAT('%', articles.slug,'%') GROUP BY articles.title ORDER BY views DESC limit 3;"
 
 #Question 2: Who are the most popular authors by view?
-Query2 = "SELECT authors.name, COUNT(*) as views from articles INNER JOIN authors on articles.author = authors.id INNER JOIN log on log.path LIKE CONCAT('%', articles.slug,'%') WHERE log.status like '%200%' GROUP BY authors.name ORDER BY views DESC;"
+Query2 = "SELECT authors.name, COUNT(*) as views from articles INNER JOIN authors on articles.author = authors.id INNER JOIN log on log.path LIKE CONCAT('%', articles.slug,'%') WHERE log.status = '200 OK' GROUP BY authors.name ORDER BY views DESC;"
 
 #Question 3: What days did more than 1% requests lead to errors?
 Query3 = "SELECT date, error_rate from error_percentage_rate where error_rate >=1;"
