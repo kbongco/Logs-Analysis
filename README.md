@@ -18,7 +18,7 @@ You Will need:<br>
 <b>Setup</b>
 <ol>
   <li>Install Vagrant and Virtual Box</li>
-  <li>Clone this Repository using ```git clone ``` </li>
+  <li>Clone this Repository using git clone </li>
 </ol>  
 
 <b>How to Run</b>
