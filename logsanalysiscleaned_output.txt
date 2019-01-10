@@ -1,19 +1,20 @@
 Here are the results!
-The Top three articles are:
-Top three articles by page view
-"Candidate is jerk, alleges rival" -- 342102 views
-"Bears love berries, alleges bear" -- 256365 views
-"Bad things gone, say good people" -- 171762 views
+
+
+The Top three articles by page view are:
+"Candidate is jerk, alleges rival" have 342102 views
+"Bears love berries, alleges bear" have 256365 views
+"Bad things gone, say good people" have 171762 views
+
 
 The Top Authors are:
-Most Popular authors of all time by view
-Ursula La Multa -- 507594 views
-Rudolf von Treppenwitz -- 423457 views
-Anonymous Contributor -- 170098 views
-Markoff Chaney -- 84557 views
+Ursula La Multa had 507594 views
+Rudolf von Treppenwitz had 423457 views
+Anonymous Contributor had 170098 views
+Markoff Chaney had 84557 views
 
 
-High error days were on...
-High error days when exceeding 1%
-        2016-07-17 ---> 2.2626862468 %
+High error days when exceeding 1% were on:
+        2016-07-17 at 2.2626862468%
+
 
