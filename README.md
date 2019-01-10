@@ -18,21 +18,58 @@ You Will need:<br>
 <b>Setup</b>
 <ol>
   <li>Install Vagrant and Virtual Box</li>
-  <li>Clone this Repository</li>
+  <li>Clone this Repository using ```git clone ``` </li>
 </ol>  
 
 <b>How to Run</b>
 <br>
-Launch the Vagrant VM changing the directory via the command line to where it was installed. Then run vagrant up, afterwards
-run vagrant ssh.<br> 
+Launch the Vagrant VM changing the directory via the command line using ```cd ```to where it was installed.<br>
+Next run ```vagrant up``` to start up the virtual machine. <br>
+Last, run the command   ```vagrant ssh``` to log into the virtual machine
 
-In order to load the data, the command psql -d news -f newsdata.sql is used to connect to the
-database as well as in order to run the various SQL statements. The database contains
-three different tables: 
+In order to load the data, the command ```psql -d news -f newsdata.sql ``` will be used to load the data into the database. There are three tables in the database these tables are :
 <ul>
-  <li>Authors Table</li>
-  <li>Articles Table</li>
-  <li>Logs Table</li>
- </ul>
+  <li>Articles</li>
+  <li>Authors</li>
+  <li>Log</li>
+</ul>
+
+If by accident, you loaded it twice or modified it you can use the following commands to fix it up: 
+
+```
+drop table log;
+drop table articles;
+drop table authors;
+```
+Then you can reimport the data via the: 
+```psql -d news -f newsdata.sql ```
+
+
+<h2> Views that need to be created</h2> 
+For the third query, in order to answer the question "On which days did more than 1% of requests lead to errors?" three views were created: 
+
+```
+CREATE view req_errors AS SELECT date(time) AS date, COUNT(*) 
+AS errors FROM LOG where not status = '200 OK' GROUP BY DATE ORDER BY errors; 
+```
+
+```
+CREATE view total_reqs AS SELECT date(time) AS date, COUNT(*)
+AS requests FROM log GROUP BY date ORDER BY request;
+```
+
+```
+CREATE view error_percentage_rate AS SELECT total_reqs.date,
+req_errors.errors/total_requests.requests:::float * 100 AS
+error_rate FROM total_reqs, req_errors WHERE 
+total_reqs.date = req_errors.date;
+```
+Afterwards, you can run the log analysis program on your shell using: 
+``` python logsanalysiscleaned.py ```
+
+
+
+
+
  
 
