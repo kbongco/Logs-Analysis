@@ -3,7 +3,7 @@ import psycopg2
 DBNAME = "news"
 
 #Question 1: What are the top 3 most popular articles of all time?
-Query1 = "SELECT articles.title, COUNT(*) as views FROM articles INNER JOIN log on log.path like CONCAT('%', articles.slug,'%') GROUP BY articles.title ORDER BY views DESC limit 3;"
+Query1 = "SELECT articles.title, COUNT(*) as views FROM articles INNER JOIN log on log.path like CONCAT('/article/', articles.slug) GROUP BY articles.title ORDER BY views DESC limit 3;"
 
 #Question 2: Who are the most popular authors by view?
 Query2 = "SELECT authors.name, COUNT(*) as views from articles INNER JOIN authors on articles.author = authors.id INNER JOIN log on log.path LIKE CONCAT('%', articles.slug,'%') WHERE log.status = '200 OK' GROUP BY authors.name ORDER BY views DESC;"
