@@ -9,7 +9,7 @@ Query1 = "SELECT articles.title, COUNT(*) as views FROM articles INNER JOIN log 
 Query2 = "SELECT authors.name, COUNT(*) as views from articles INNER JOIN authors on articles.author = authors.id INNER JOIN log on log.path LIKE CONCAT('/article/', articles.slug) WHERE log.status = '200 OK' GROUP BY authors.name ORDER BY views DESC;"
 
 #Question 3: What days did more than 1% requests lead to errors?
-Query3 = "SELECT date, error_rate from error_percentage_rate where error_rate >=1;"
+Query3 = "SELECT date, percent from error_percentage_rate where error_rate >=1;"
 
 
 #Connect to the database
