@@ -1,10 +1,7 @@
-Here are the results!
-
-
 The Top three articles by page view are:
-"Candidate is jerk, alleges rival" have 342102 views
-"Bears love berries, alleges bear" have 256365 views
-"Bad things gone, say good people" have 171762 views
+"Candidate is jerk, alleges rival" have 338647 views
+"Bears love berries, alleges bear" have 253801 views
+"Bad things gone, say good people" have 170098 views
 
 
 The Top Authors are:
@@ -14,7 +11,5 @@ Anonymous Contributor had 170098 views
 Markoff Chaney had 84557 views
 
 
-High error days when exceeding 1% were on:
-        2016-07-17 at 2.2626862468%
-
-
+High error days exceeding 1% were on:
+2016-07-17 at 2.26 %
