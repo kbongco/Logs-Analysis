@@ -64,9 +64,9 @@ AS requests FROM log GROUP BY date ORDER BY request;
 
 ```
 CREATE view error_percentage_rate AS SELECT total_reqs.date,
-req_errors.errors/total_requests.requests:::float * 100 AS
-error_rate FROM total_reqs, req_errors WHERE 
-total_reqs.date = req_errors.date;
+round(100.0 * req_errors.errors/total_reqs.requests,2) as percent
+from total_reqs, req_errors where total_reqs.date = req_errors.date;
+
 ```
 Afterwards, you can run the log analysis program on your shell using:<br> 
 ``` python logsanalysiscleaned.py ```
