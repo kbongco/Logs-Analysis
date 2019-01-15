@@ -59,7 +59,7 @@ AS errors FROM LOG where not status = '200 OK' GROUP BY DATE ORDER BY errors;
 
 ```
 CREATE view total_reqs AS SELECT date(time) AS date, COUNT(*)
-AS requests FROM log GROUP BY date ORDER BY request;
+AS requests FROM log GROUP BY date ORDER BY requests;
 ```
 
 ```
