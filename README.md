@@ -1,9 +1,14 @@
 <h1>Udacity Fullstack Nanodegree:Logs Analysis</h1>
 
 This is the First Project in the Full Stack Web Development Nanodegree course that is offered in Udacity. We are given a large database 
-and are instructed to run complex sql queries to draw conclusions based on the data. This comes
-in the form of an internal reporting tool that will use the information from the database to 
-answer several questions such as "Who are the top authors?" and "What are the top 3 articles?"
+and are instructed to run complex sql queries to draw conclusions based on the data. To do this, we created a program to create 
+an internal reporting tool using the skills learned from Python and PSQL. Using Python and PSQL, an internal reporting tool is created
+to use information from the database to answer the following questions: 
+<ol>
+  <li>Who are the top authors?</li>
+  <li>What are the top articles?</li>
+  <li>What days had high error rates?</li>
+</ol>
 <br> 
 <br>
 
