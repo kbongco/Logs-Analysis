@@ -73,7 +73,7 @@ FROM total_reqs, req_errors WHERE total_reqs.date = req_errors.date;
 
 ```
 Afterwards, you can run the log analysis program on your shell using:<br> 
-``` python logsanalysiscleaned.py ```
+``` python logsanalysisfinal.py ```
 
 
 
